@@ -1,4 +1,9 @@
-import { assets, infoList, toolsData } from "@/assets/assets";
+import {
+  assets,
+  educationData,
+  skillsData,
+  certificationsData,
+} from "@/assets/assets";
 import Image from "next/image";
 import React from "react";
 
@@ -8,48 +13,108 @@ const About = () => {
       <h4 className="text-center mb-2 text-lg font-Ovo">Introduction</h4>
       <h2 className="text-center text-5xl font-Ovo">About Me</h2>
 
-      <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
-        <div className="w-64 sm:w-80 rounded-3xl max-w-none">
+      <div className="flex w-full flex-col lg:flex-row items-start gap-20 my-20">
+        <div className="w-64 sm:w-80 rounded-3xl max-w-none lg:sticky lg:top-24 group">
           <Image
             src={assets.user_image}
             alt="user_image"
-            className="w-full rounded-3xl"
+            className="w-full rounded-3xl transition-transform duration-500 group-hover:scale-105"
           />
         </div>
 
-        <div className="flex-1 ">
+        <div className="flex-1">
           <p className="mb-10 max-w-2xl font-Ovo">
-            I am an experienced Frontend Developer with over a decade of
-            professional expertise in the field. Throughout my carrer, I have
-            had the privillege of collaborating with prestigious organization,
+            I am a seasoned Marketing Strategist with over a decade of
+            professional expertise in the field. Throughout my career, I have
+            had the privilege of collaborating with prestigious organizations,
             contributing to their success and growth.
           </p>
 
-          <ul className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
-            {infoList.map(({ icon, iconDark, title, description }, index) => (
-              <li
-                key={index}
-                className="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-purple-100 hover:-translate-y-1 duration-500 hover:[box-shadow:4px_4px_0_#000]"
-              >
-                <Image src={icon} alt={title} className="w-7 mt-3" />
-                <h3 className="my-4 font-semibold text-gray-700">{title}</h3>
-                <p className="text-gray-600 text-sm">{description}</p>
-              </li>
-            ))}
-          </ul>
+          <div className="space-y-12">
+            {/* Education Section */}
+            <section className="transform transition-all duration-500 hover:translate-x-2">
+              <h3 className="text-2xl font-semibold mb-6 text-gray-800 flex items-center gap-3">
+                <Image
+                  src={assets.edu_icon}
+                  alt="Education"
+                  className="w-6 h-6"
+                />
+                EDUCATION
+              </h3>
+              <div className="space-y-8">
+                {educationData.map((edu, index) => (
+                  <div
+                    key={index}
+                    className="border-l-2 border-purple-500 pl-6 relative transform transition-all duration-500 hover:translate-x-2"
+                  >
+                    <div className="absolute w-3 h-3 bg-purple-500 rounded-full -left-[7px] top-2" />
+                    <h4 className="text-lg font-semibold text-gray-800">
+                      {edu.degree}{" "}
+                      <span className="text-purple-600">| {edu.year}</span>
+                    </h4>
+                    <p className="text-purple-600 italic mt-1">
+                      {edu.institution}
+                    </p>
+                    <p className="text-gray-600 mt-2 text-sm">{edu.details}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
 
-          <h4 className="my-6 text-gray-700">Tools I use</h4>
+            {/* Skills Section */}
+            <section>
+              <h3 className="text-2xl font-semibold mb-6 text-gray-800 flex items-center gap-3">
+                <Image
+                  src={assets.code_icon}
+                  alt="Skills"
+                  className="w-6 h-6"
+                />
+                SKILLS & CORE COMPETENCIES
+              </h3>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {skillsData.map((skill, index) => (
+                  <li
+                    key={index}
+                    className="flex items-center gap-3 text-gray-700 p-4 rounded-lg hover:bg-purple-50 transform transition-all duration-500 hover:-translate-y-1 hover:[box-shadow:4px_4px_0_#000] border border-gray-200"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center">
+                      <Image src={skill.icon} alt="Skill" className="w-4 h-4" />
+                    </div>
+                    {skill.text}
+                  </li>
+                ))}
+              </ul>
+            </section>
 
-          <ul className="flex items-center gap-3 sm:gap-5">
-            {toolsData.map((tool, index) => (
-              <li
-                className="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 hover:[box-shadow:4px_4px_0_#000]"
-                key={index}
-              >
-                <Image src={tool} alt="Tool" className="w-5 sm:w-7" />
-              </li>
-            ))}
-          </ul>
+            {/* Certifications Section */}
+            <section>
+              <h3 className="text-2xl font-semibold mb-6 text-gray-800 flex items-center gap-3">
+                <Image
+                  src={assets.project_icon}
+                  alt="Certifications"
+                  className="w-6 h-6"
+                />
+                CERTIFICATIONS & ACHIEVEMENTS
+              </h3>
+              <ul className="space-y-4">
+                {certificationsData.map((cert, index) => (
+                  <li
+                    key={index}
+                    className="flex items-center gap-3 text-gray-700 p-4 rounded-lg hover:bg-purple-50 transform transition-all duration-500 hover:-translate-x-2 hover:[box-shadow:4px_4px_0_#000] border border-gray-200"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center">
+                      <Image
+                        src={cert.icon}
+                        alt="Certification"
+                        className="w-4 h-4"
+                      />
+                    </div>
+                    {cert.text}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </div>
         </div>
       </div>
     </div>

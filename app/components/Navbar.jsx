@@ -39,7 +39,7 @@ const Navbar = () => {
           <Image
             src={assets.logo}
             alt=""
-            className="w-28 cursor-pointer mr-14"
+            className="w-60 cursor-pointer mr-14"
           />
         </a>
 

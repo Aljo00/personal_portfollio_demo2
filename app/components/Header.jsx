@@ -6,20 +6,20 @@ const Header = () => {
   return (
     <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
       <div>
-        <Image src={assets.profile_img} alt="" className="rounded-full w-32" />
+        <Image src={assets.profile_img} alt="" className="rounded-full w-50" />
       </div>
 
       <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
-        Hi! I'm William Mark{" "}
+        Hi! I'm Haritha Seema Jyothi{" "}
         <Image src={assets.hand_icon} alt="" className="w-6" />
       </h3>
 
       <h1 className="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">
-        frontend web developer based in India
+        MARKETING STRATEGIST based in UAE
       </h1>
 
       <p className="max-w-2xl mx-auto font-Ovo">
-        I'm a frontend developer from Kerala, India with 2 years of experience
+        I'm a MARKETING STRATEGIST from Kerala, UAE with 3 years of experience
         in multiple projects.
       </p>
 
