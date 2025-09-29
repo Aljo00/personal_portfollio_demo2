@@ -19,7 +19,7 @@ const Header = () => {
       </h1>
 
       <p className="max-w-2xl mx-auto font-Ovo">
-        I'm a MARKETING STRATEGIST from Kerala, UAE with 3 years of experience
+        I'm a MARKETING STRATEGIST from UAE with 3 years of experience
         in multiple projects.
       </p>
 
