@@ -1,5 +1,6 @@
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
+import { icons } from "lucide-react";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -12,8 +13,11 @@ const ovo = Ovo({
 });
 
 export const metadata = {
-  title: "Portfolio demo",
+  title: "Haritha Seema Jyothi - Marketing Strategist & Consultant",
   description: "It is a demo Portfolio website",
+  icons: {
+    icon : "./logo.png",
+  },
 };
 
 export default function RootLayout({ children }) {

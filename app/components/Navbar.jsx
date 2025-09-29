@@ -63,13 +63,13 @@ const Navbar = () => {
           <li>
             {" "}
             <a className="font-Ovo" href="#services">
-              Services
+              Experience
             </a>
           </li>
           <li>
             {" "}
             <a className="font-Ovo" href="#work">
-              My Works
+              Services
             </a>
           </li>
           <li>
@@ -122,14 +122,13 @@ const Navbar = () => {
             </li>
             <li>
               {" "}
-              <a className="font-Ovo" onClick={closeMenu} href="#services">
-                Services
-              </a>
+              <a className="font-Ovo" onClick={closeMenu} href="#services"></a>
+              Experience
             </li>
             <li>
               {" "}
               <a className="font-Ovo" onClick={closeMenu} href="#work">
-                My Works
+                Services
               </a>
             </li>
             <li>

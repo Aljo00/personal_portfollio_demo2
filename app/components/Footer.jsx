@@ -16,13 +16,13 @@ const Footer = () => {
   const socialLinks = [
     {
       name: "LinkedIn",
-      url: "#",
+      url: "https://www.linkedin.com/in/haritha-jyothi-130759250/",
       icon: Linkedin,
       color: "hover:border-blue-500 hover:text-blue-500",
     },
     {
       name: "Instagram",
-      url: "#",
+      url: "https://www.instagram.com/haritha.jyothi?utm_source=ig_web_button_share_sheet&igsh=MXczY2x4N25mcW10dw==",
       icon: Instagram,
       color: "hover:border-pink-500 hover:text-pink-500",
     },
@@ -51,7 +51,7 @@ const Footer = () => {
             <Image
               src={assets.logo}
               alt="Haritha Seema Jyothi"
-              className="w-36"
+              className="w-50"
             />
             <p className="text-gray-600 text-sm mt-4 leading-relaxed">
               A passionate marketing professional specializing in digital
