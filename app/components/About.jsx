@@ -24,7 +24,7 @@ const About = () => {
 
         <div className="flex-1">
           <p className="mb-10 max-w-2xl font-Ovo">
-            I am a seasoned Marketing Strategist with over a decade of
+            I am a seasoned Marketing Strategist with over a 3Years of
             professional expertise in the field. Throughout my career, I have
             had the privilege of collaborating with prestigious organizations,
             contributing to their success and growth.
