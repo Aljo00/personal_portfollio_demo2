@@ -40,7 +40,7 @@ const Work = () => {
 
   return (
     <div
-      id="services"
+      id="work"
       className="w-full px-4 sm:px-[8%] md:px-[12%] py-6 sm:py-10 scroll-mt-20"
     >
       <h4 className="text-center mb-2 text-base sm:text-lg font-Ovo">
@@ -100,13 +100,6 @@ const Work = () => {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="text-center mt-12">
-        <button className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full hover:gap-4 transition-all">
-          Get in Touch
-          <Image src={assets.right_arrow_white} alt="arrow" className="w-4" />
-        </button>
       </div>
     </div>
   );
